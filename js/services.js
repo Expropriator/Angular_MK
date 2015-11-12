@@ -10,6 +10,16 @@ angular.module('factoryExample')
             localStorage.setItem('persons', JSON.stringify(persons));
         }
 
+        function get(id) {
+            var result;
+            angular.forEach(persons, function(person, i) {
+                if(person.id == id) {
+                    result = person;
+                }
+            });
+            return result;
+        }
+
         function add(person) {
             persons.push(person);
             save();
@@ -27,6 +37,7 @@ angular.module('factoryExample')
         return {
             list: persons,
             add: add,
-            remove: remove
+            remove: remove,
+            get: get
         }
     });

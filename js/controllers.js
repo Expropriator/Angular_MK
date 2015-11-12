@@ -13,6 +13,7 @@ angular.module('factoryExample')
             $scope.person = {};
         }
     })
-    .controller('PersonEditCtrl', function() {
-
+    .controller('PersonEditCtrl', function($scope, $routeParams, personsFactory) {
+        var id = $routeParams['personId'];
+        $scope.person = personsFactory.get(id);
     });
