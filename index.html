@@ -2,11 +2,12 @@
 <html ng-app="factoryExample">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>factory() example</title>
+    <title>Angular MK</title>
 
     <link rel="stylesheet" href="css/table.css"/>
 
     <script src="js/lib/AngularJS/angular.min.js"></script>
+    <script src="js/lib/AngularJS/angular-route.min.js"></script>
 
     <script src="js/app.js"></script>
     <script src="js/services.js"></script>
@@ -14,28 +15,9 @@
 </head>
 <body>
 
-    <div ng-controller="PersonAddCtrl">
-        <form ng-submit="add()">
-            <input type="text" ng-model="person.id">
-            <input type="text" ng-model="person.firstName">
-            <input type="text" ng-model="person.lastName">
+    <h1>Persons application</h1>
 
-            <input type="submit" value="Add">
-        </form>
-    </div>
-
-    <div ng-controller="PersonListCtrl">
-        <table>
-            <tr ng-repeat="person in persons track by $index">
-                <td>{{person.id}}</td>
-                <td>{{person.firstName}}</td>
-                <td>{{person.lastName}}</td>
-                <td ng-click="remove(person.id)">
-                    <a href="#">X</a>
-                </td>
-            </tr>
-        </table>
-    </div>
+    <ng-view></ng-view>
 
 </body>
 </html>

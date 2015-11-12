@@ -1,0 +1,24 @@
+<h4>Persons List</h4>
+
+<div ng-controller="PersonAddCtrl">
+    <form ng-submit="add()">
+        <input type="text" ng-model="person.id">
+        <input type="text" ng-model="person.firstName">
+        <input type="text" ng-model="person.lastName">
+
+        <input type="submit" value="Add">
+    </form>
+</div>
+
+<div ng-controller="PersonListCtrl">
+    <table>
+        <tr ng-repeat="person in persons track by $index">
+            <td>{{person.id}}</td>
+            <td>{{person.firstName}}</td>
+            <td>{{person.lastName}}</td>
+            <td ng-click="remove(person.id)">
+                <a href="#">X</a>
+            </td>
+        </tr>
+    </table>
+</div>

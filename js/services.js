@@ -11,7 +11,7 @@ angular.module('factoryExample')
         }
 
         function add(person) {
-            persons.push(person)
+            persons.push(person);
             save();
         }
 
