@@ -12,4 +12,7 @@ angular.module('factoryExample')
             personsFactory.add($scope.person);
             $scope.person = {};
         }
+    })
+    .controller('PersonEditCtrl', function() {
+
     });

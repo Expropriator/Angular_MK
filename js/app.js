@@ -5,5 +5,9 @@ app.config(function($routeProvider) {
         .when('/', {
             templateUrl: 'personList.html'
         })
+        .when('/edit/:personId', {
+            templateUrl: 'personEdit.html',
+            controller: 'PersonEditCtrl'
+        })
         .otherwise({ redirectTo: '/' });
 });
