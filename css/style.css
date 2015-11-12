@@ -1,0 +1,13 @@
+.example iframe {
+    width: 100%;
+    border: none;
+}
+
+section.main {
+    margin: 0;
+}
+
+.CodeMirror {
+    height: auto;
+    font-size: 20px;
+}

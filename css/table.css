@@ -1,0 +1,22 @@
+
+table {
+    margin: 10px 0;
+    width: 500px;
+}
+td {
+    border: 1px solid black;
+    cursor: pointer;
+}
+th {
+    cursor: pointer;
+    color: white;
+    background-color: #1a6451;
+    border: 1px solid black;
+}
+th.selected {
+    color: #00ff00;
+}
+tr:hover {
+    color: white;
+    background-color: #008855;
+}
