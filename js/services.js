@@ -38,6 +38,7 @@ angular.module('factoryExample')
             list: persons,
             add: add,
             remove: remove,
-            get: get
+            get: get,
+            save: save
         }
     });
